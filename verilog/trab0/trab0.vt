@@ -1,0 +1,33 @@
+module trab0(
+	input [0:5] SW,
+	input [0:1] KEY,
+	input CLOCK_50,
+
+	output reg [0:7] HEX0
+);
+
+	always @(posedge CLOCK_50) begin
+
+	if ( SW[0] == 1) begin
+		HEX0[0] <= 0;
+		HEX0[1] <= 0;
+		HEX0[2] <= 0;
+		HEX0[3] <= 0;
+		HEX0[4] <= 0;
+		HEX0[5] <= 0;
+		HEX0[6] <= 0;
+		HEX0[7] <= 1;
+	end	
+
+	else begin
+		HEX0[0] <= 1;
+		HEX0[1] <= 1;
+		HEX0[2] <= 1;
+		HEX0[3] <= 1;
+		HEX0[4] <= 1;
+		HEX0[5] <= 1;
+		HEX0[6] <= 1;
+		HEX0[7] <= 1;
+	end
+
+end
